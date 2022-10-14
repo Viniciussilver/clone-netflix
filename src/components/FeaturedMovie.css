@@ -1,0 +1,120 @@
+.featured {
+  height: 100vh;
+}
+
+.featured-vertical {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #111, transparent);
+}
+
+.featured-horizontal {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #111, transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  padding-bottom: 100px;
+}
+
+.featured-name {
+  font-size: 60px;
+  font-weight: bold;
+  width: 50%;
+}
+
+.featured-info {
+  font-size: 18px;
+
+  margin-top: 20px;
+}
+
+.featured-points,
+.featured-year,
+.featured-seasons {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.featured-points {
+  color: #46d369;
+}
+
+.featured-description {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #999;
+  max-width: 40%;
+}
+
+.featured-buttons {
+  margin-top: 15px;
+}
+.featured-watch,
+.featured-list {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.featured-watch:hover,
+.featured-list:hover {
+  opacity: 0.7;
+}
+
+.featured-watch {
+  background-color: #fff;
+  color: #000;
+  margin-right: 15px;
+}
+.featured-list {
+  background-color: #333;
+  color: #fff;
+}
+
+.featured-genres {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #999;
+}
+
+@media screen and (max-width: 880px) {
+  .featured {
+    height: 90vh;
+  }
+  .featured-name {
+    width: 80%;
+    font-size: 32px;
+  }
+  .featured-horizontal {
+    padding-top: 30px;
+  }
+
+  .featured-info {
+    font-size: 16px;
+    margin-top: 13px;
+  }
+
+  .featured-genres {
+    margin-top: 10px;
+    width: 87%;
+  }
+  .featured-description {
+    font-size: 18px;
+    max-width: 90%;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+  .featured-watch,
+  .featured-list {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}

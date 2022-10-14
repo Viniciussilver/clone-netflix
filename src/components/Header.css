@@ -1,0 +1,23 @@
+.header {
+  padding: 0 20px;
+  height: 65px;
+  width: 100%;
+
+  background: transparent;
+  display: flex;
+  align-items: center;
+
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  transition: all ease 0.6s;
+}
+.header img {
+  width: 140px;
+}
+
+.black {
+  background-color: #141414;
+  box-shadow: 0.5px 0.5px 10px 0.5px #000;
+}
