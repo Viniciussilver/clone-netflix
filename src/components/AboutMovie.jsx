@@ -5,7 +5,6 @@ import "./AboutMovie.css"
 export const AboutMovie = () => {
   const [visible, setVisible] = useState(false)
   const { movie, saveMovie } = useContext(MovieContext)
-  console.log(movie)
 
   if (movie) {
     movie.overview =
