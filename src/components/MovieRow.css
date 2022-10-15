@@ -47,7 +47,24 @@
 .row-list {
   overflow: auto;
   white-space: nowrap;
+  scroll-behavior: smooth;
 }
+.buttons-scroll {
+  padding-top:7px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+}
+  .buttons-scroll button {
+    font-size: 20px;
+    opacity:0.6;
+    cursor:pointer;
+  }
+  .buttons-scroll button:active {
+    opacity:0.9;
+  }
 .row-list::-webkit-scrollbar {
   display: none;
   height: 11px;

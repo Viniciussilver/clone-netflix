@@ -1,10 +1,11 @@
-import React, { useContext } from "react"
+import React, { useContext, useRef } from "react"
 import { MovieContext } from "../Context/MovieContext"
 
 import "./MovieRow.css"
 
 export const MovieRow = ({ title, items, slug }) => {
   const { saveMovie } = useContext(MovieContext)
+  const carousel = useRef(null)
 
   // const { saveMovie } = useContext(MovieContext)
   // console.log(items)
@@ -24,6 +25,14 @@ export const MovieRow = ({ title, items, slug }) => {
 
   // }
 
+  const handleScollLeft = () => {
+    carousel.current.scrollLeft -= carousel.current.offsetWidth
+  }
+  const handleScollRight = () => {
+    carousel.current.scrollLeft += carousel.current.offsetWidth
+  }
+
+
   return (
     <div className="movieRow">
       <h2>{title}</h2>
@@ -31,7 +40,7 @@ export const MovieRow = ({ title, items, slug }) => {
       <div className="movieRow-listarea">
         {/* <div className="row-left" >  </div>
       <div className="row-right" > </div> */}
-        <div className="row-list">
+        <div className="row-list" ref={carousel}>
           {items.results.length > 0 &&
             items.results.map((item, key) => (
               <div key={key} className="movieRow-item">
@@ -59,6 +68,11 @@ export const MovieRow = ({ title, items, slug }) => {
               </div>
             ))}
         </div>
+      </div>
+      <div className="buttons-scroll">
+      <button onClick={handleScollLeft}>◄</button>
+      <button onClick={handleScollRight}>►</button>
+
       </div>
     </div>
   )
